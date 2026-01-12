@@ -27,7 +27,7 @@ conda env create -f environment.yml
 After creating this environment, you can activate it via
 
 ```bash
-conda activate "pyml-book"
+conda activate machine-learning-book
 ```
 
 **Pip**
