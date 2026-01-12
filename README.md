@@ -46,15 +46,6 @@ pip install numpy==1.21.2 scipy==1.7.0 scikit-learn==1.0 matplotlib==3.4.3 panda
 ```
 
 
-
-
-
-
-
-
-
-
-
 ### Acknowledgements
 Sebastian Raschka, Yuxi (Hayden) Liu, and Vahid Mirjalili.  
 *Machine Learning with PyTorch and Scikit-Learn*. Packt Publishing, 2022.
@@ -68,3 +59,6 @@ Sebastian Raschka, Yuxi (Hayden) Liu, and Vahid Mirjalili.
   title     = {Machine Learning with PyTorch and Scikit-Learn},
   year      = {2022}
 }
+```
+
+[https://sebastianraschka.com/books/#machine-learning-with-pytorch-and-scikit-learn](https://sebastianraschka.com/books/#machine-learning-with-pytorch-and-scikit-learn)
