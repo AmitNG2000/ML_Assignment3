@@ -42,7 +42,7 @@ source pyml-book/bin/activate
 After activating your environment, you can install the required packages via
 
 ```bash
-pip install numpy==1.21.2 scipy==1.7.0 scikit-learn==1.0 matplotlib==3.4.3 pandas==1.3.2, jupyterlab
+pip install numpy==1.21.2 scipy==1.7.0 scikit-learn==1.0 matplotlib==3.4.3 pandas==1.3.2, jupyterlab, tensorflow
 ```
 
 
