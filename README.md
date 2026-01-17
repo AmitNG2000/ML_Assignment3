@@ -1,8 +1,13 @@
 # Assignment 3 – Building a Multilayer Artificial Neural Network
 
-This repository contains our solution for the Assignment 3 – Building a Multilayer Artificial Neural Network. Given the code at chapter 11: “Implementing a Multi-layer Artificial Neural Network from Scratch” of the book “Machine Learning with PyTorch and Scikit-Learn” by Raschka et al. (2022). We extend the code to address multilayer hidden layers.
+We implement a **multilayer artificial neural network (ANN) using NumPy and Python** only and compare its performance with an equivalent ANN implemention using **Keras**.
 
-### Instruction:
+The repository is available at: https://github.com/AmitNG2000/ML_Assignment3
+
+The implementation is based on Chapter 11 of the book *Machine Learning with PyTorch and Scikit-Learn*.
+
+
+### Assignment Instruction:
 [https://docs.google.com/document/d/19KZ-5a8XbB1EkJ6NK4b0S8B9HS_7OL8I/edit](https://docs.google.com/document/d/19KZ-5a8XbB1EkJ6NK4b0S8B9HS_7OL8I/edit)
 
 [docs\ML_Assignment3_Instructions.pdf](docs\ML_Assignment3_Instructions.pdf)
