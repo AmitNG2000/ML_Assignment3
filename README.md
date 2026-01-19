@@ -2,7 +2,7 @@
 
 We implement a multilayer artificial neural network (ANN) using only NumPy and Python, and comparing its performance with a single-layer ANN and a Keras-based ANN implementation
 
-The repository is available at: https://github.com/AmitNG2000/ML_Assignment3
+**The repository is available at:** [https://github.com/AmitNG2000/ML_Assignment3](https://github.com/AmitNG2000/ML_Assignment3)
 
 The implementation is based on Chapter 11 of the book *Machine Learning with PyTorch and Scikit-Learn*.
 
