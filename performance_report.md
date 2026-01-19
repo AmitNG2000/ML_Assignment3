@@ -59,6 +59,9 @@ The custom implementation defines a multi-layer perceptron with:
 
 ### NeuralNetMLP Class
 
+The `NeuralNetMLP` class defines the structure and training process of a multi-layer neural network using three main inputs: `num_features`, `hidden_layers`, and `num_classes`. The `num_features` parameter determines the dimensionality of the input layer and corresponds to the number of features in the data. The `hidden_layers` parameter is a list whose length can be chosen arbitrarily, allowing the network to include as many hidden layers as needed, while each element specifies the number of neurons in the corresponding layer. The `num_classes` parameter defines the size of the output layer and represents the number of target classes. During the forward pass, input features are successively transformed through all hidden layers and mapped to an output vector of length `num_classes`. During training, this structure use backpropagation to compute gradients for every layer, enabling parameter updates based on the prediction error.
+
+
 ## Step 3: Performance Evaluation
 
 Apply the code of step on 2, `NeuralNetMLP`, for classifying handwritten digits using MNIST dataset. 
