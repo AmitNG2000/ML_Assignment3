@@ -1,6 +1,6 @@
 # Assignment 3 – Building a Multilayer Artificial Neural Network
 
-We implement a **multilayer artificial neural network (ANN) using NumPy and Python** only and compare its performance with an equivalent ANN implemention using **Keras**.
+We implement a multilayer artificial neural network (ANN) using only NumPy and Python, and comparing its performance with a single-layer ANN and a Keras-based ANN implementation
 
 The repository is available at: https://github.com/AmitNG2000/ML_Assignment3
 
@@ -20,10 +20,11 @@ The implementation is based on Chapter 11 of the book *Machine Learning with PyT
 | Nechi Berhe Weldu | 850164070             | weldu@post.bgu.ac.il     |
 | Amit Ner Gaon     | 211649801             | amitner@post.bgu.ac.il   |
 
+### Performance Report
 
-### Setting Up Your Python Environment
+[Performance Report](performance_report.md)
 
-**Conda**
+### Setting Up Your Python Environment Using *Conda*
 
 ```bash
 conda env create -f environment.yml
@@ -34,22 +35,6 @@ After creating this environment, you can activate it via
 ```bash
 conda activate machine-learning-book
 ```
-
-**Pip**
-
-```bash
-pip install virtualenv
-cd /path/to/where/you/want/your/environment
-virtualenv pyml-book
-source pyml-book/bin/activate 
-```
-
-After activating your environment, you can install the required packages via
-
-```bash
-pip install numpy==1.21.2 scipy==1.7.0 scikit-learn==1.0 matplotlib==3.4.3 pandas==1.3.2, jupyterlab, tensorflow
-```
-
 
 ### Acknowledgements
 Sebastian Raschka, Yuxi (Hayden) Liu, and Vahid Mirjalili.  

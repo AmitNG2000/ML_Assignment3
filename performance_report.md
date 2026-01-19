@@ -40,7 +40,9 @@ Key concepts covered:
 
 ---
 
-## Step 2: Custom NumPy-Based ANN Implementation
+## Step 2: Implementing Multilayer ANN Using only *NumPy* 
+
+Extend the ch11.ipynb code to address two hidden layers.
 
 The `NeuralNetMLP` class implements a complete multilayer neural network **using only NumPy and Python**. It handles forward propagation, backpropagation, minibatch training, and inference, managing all weights, biases, activations, and training metrics internally.
 
@@ -56,15 +58,20 @@ The custom implementation defines a multi-layer perceptron with:
 
 ### NeuralNetMLP Class
 
+## Step 3: Performance Evaluation
+
+Apply the code of step on 2, `NeuralNetMLP`, for classifying handwritten digits using MNIST dataset. 
+
 
 #### Training
 
-The custom ANN was trained using stochastic gradient descent with minibatches of 100 samples over 20 epochs.
+The custom ANN was trained using stochastic gradient descent (SGD) with minibatches of 100 samples over 20 epochs.
 
-*Figure 1: Training loss progression across epochs*
+*Figure 1: Training loss progression across epochs* <br>
 ![Training Loss](./docs/figures/NeuralNetMLP_train_mse.png)
 <br>
-*Figure 2: Training accuracy progression across epochs*
+<br>
+*Figure 2: Training accuracy progression across epochs* <br>
 ![Training Accuracy](./docs/figures/NeuralNetMLP_train_acc.png)
 
 **Training Configuration**:
@@ -73,21 +80,24 @@ The custom ANN was trained using stochastic gradient descent with minibatches of
 - Total epochs: 20
 
 
-| Metric | Custom NumPy ANN |
-|--------|------------------|
-| Train MSE | X |
-| Validation MSE | X |
-| Train Accuracy | 96.52% |
-| Validation Accuracy | 95.26% |
+Data Split | Metric   | NeuralNetMLP |
+-----------|----------|--------------|
+Train      | MSE      | X            |
+Train      | Accuracy | 96.52%       |
+Train      | AUC      | X            |
+Validation | MSE      | X            |
+Validation | Accuracy | 95.26%       |
+Validation | AUC      | X            |
 
 
 
 ### Performance Results
 
-| Metric | Custom NumPy ANN |
-|--------|------------------|
-| Test MSE | 0.0075 |
-| Test Accuracy | 95.25% |
+Data Split | Metric    | NeuralNetMLP |
+-----------|-----------|------------------|
+Test       |  MSE      | 0.0075           |
+Test       |  Accuracy | 95.25%           |
+Test       |  AUC      | X                |
 
 ---
 
@@ -101,7 +111,7 @@ The custom ANN was trained using stochastic gradient descent with minibatches of
 - **Metrics**: Accuracy
 - **Batch Size**: 100
 - **Epochs**: 20
-- **Validation Split**: 0.2 (internal validation on 20% of training data)
+- **Validation Split**: 0.2
 
 #### Training
 
@@ -114,18 +124,18 @@ The custom ANN was trained using stochastic gradient descent with minibatches of
 - Total epochs: 20
 
 
-| Metric | Keras ANN |
-|--------|-----------|
-| Validation MSE | 0.9361 |
-| Validation Accuracy | 94.22% |
+Data Split | Metric    | Keras ANN |
+-----------|-----------|-----------|
+Validation |  MSE      | 0.9361    |
+Validation |  Accuracy | 94.22%    |
 
 
 ### Keras Model Performance
 
-| Metric | Keras ANN |
-|--------|-----------|
-| Test MSE | 0.0611 |
-| Test Accuracy | 56.39% |
+Data Split | Metric   | Keras ANN |
+-----------|----------|-----------|
+Test       | MSE      | 0.0611    | 
+Test       | Accuracy | 56.39%    |
 
 ---
 
@@ -138,12 +148,12 @@ The **single-layer ANN**, which corresponds to the **original ANN implementation
 All models used identical preprocessing and dataset splits, ensuring a fair comparison.
 
 
-| Aspect | Singel Layer ANN | Custom NumPy ANN | Keras | 
-|--------|------------------|-------|-----------------|
-| Test MSE |  0.0092 | 0.0075 | 0.0611 |
-| Test Accuracy |  94.54% | 95.25% | 56.39% |
-| Training Speed |  Moderate | Moderate | Fast |
-| Code Complexity | High | High | Low | 
+| Aspect          | Singel Layer ANN | NeuralNetMLP | Keras  | 
+|-----------------|------------------|--------------|--------|
+| Test MSE        |  0.0092          | 0.0075       | 0.0611 |
+| Test Accuracy   |  94.54%          | 95.25%       | 56.39% |
+| Training Speed  |  Moderate        | Moderate     | Fast   |
+| Code Complexity | High             | High         | Low    | 
 
 
 
