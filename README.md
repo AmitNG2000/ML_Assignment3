@@ -14,11 +14,11 @@ The implementation is based on Chapter 11 of the book *Machine Learning with PyT
 
 ### Students
 
-| Name              | id                    | email                    |
-|-------------------|-----------------------|--------------------------|
-| Omer Eliyahu      | 206510828             | Omereliy@post.bgu.ac.il  |
-| Nechi Berhe Weldu | 850164070             | weldu@post.bgu.ac.il     |
-| Amit Ner Gaon     | 211649801             | amitner@post.bgu.ac.il   |
+| Name              | email                    |
+|-------------------|--------------------------|
+| Omer Eliyahu      | Omereliy@post.bgu.ac.il  |
+| Nechi Berhe Weldu | weldu@post.bgu.ac.il     |
+| Amit Ner Gaon     | amitner@post.bgu.ac.il   |
 
 ### Performance Report
 
