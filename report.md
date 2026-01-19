@@ -62,10 +62,10 @@ The custom implementation defines a multi-layer perceptron with:
 The custom ANN was trained using stochastic gradient descent with minibatches of 100 samples over 20 epochs.
 
 *Figure 1: Training loss progression across epochs*
-![Training Loss](./ch11/my_figures/NeuralNetMLP_train_mse.png)
+![Training Loss](./docs/figures/NeuralNetMLP_train_mse.png)
 <br>
 *Figure 2: Training accuracy progression across epochs*
-![Training Accuracy](./ch11/my_figures/NeuralNetMLP_train_acc.png)
+![Training Accuracy](./docs/figures/NeuralNetMLP_train_acc.png)
 
 **Training Configuration**:
 - Learning rate: 0.1
@@ -106,7 +106,7 @@ The custom ANN was trained using stochastic gradient descent with minibatches of
 #### Training
 
 *Figure 3: Training loss and accuracy progression across epochs*
-![Training Loss and Accuracy](./ch11/my_figures/keras_train_acc_mse.png)
+![Training Loss and Accuracy](./docs/figures/keras_train_acc_mse.png)
 
 **Training Configuration**:
 - Learning rate: 0.1
