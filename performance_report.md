@@ -1,8 +1,9 @@
 # Neural Network Performance Report: Custom ANN vs Keras Implementation
 
-## Executive Summary
 
-This report documents the implementation and comparison of two approaches to building Artificial Neural Networks (ANNs) for the MNIST handwritten digit classification task. The analysis compares a custom NumPy - based implementation with a Kerasn - based implementation, evaluating their predictive performance, architecture, and training characteristics.
+This report evaluates the performance of three Artificial Neural Network (ANN) approaches on the MNIST handwritten digit classification task: a single-layer ANN, a custom multilayer ANN implemented solely with NumPy `NeuralNetMLP`, and a Keras-based ANN.
+
+**Note: AUC is macro AUC.**
 
 ---
 
@@ -67,37 +68,44 @@ Apply the code of step on 2, `NeuralNetMLP`, for classifying handwritten digits 
 
 The custom ANN was trained using stochastic gradient descent (SGD) with minibatches of 100 samples over 20 epochs.
 
-*Figure 1: Training loss progression across epochs* <br>
-![Training Loss](./docs/figures/NeuralNetMLP_train_mse.png)
+*Figure 1: `NeuralNetMLP` metrics progression across training epochs* <br>
+![NeuralNetMLP metrics progression](./docs/figures/NeuralNetMLP_training_history.png)
 <br>
 <br>
-*Figure 2: Training accuracy progression across epochs* <br>
-![Training Accuracy](./docs/figures/NeuralNetMLP_train_acc.png)
+
 
 **Training Configuration**:
 - Learning rate: 0.1
 - Batch size: 100
 - Total epochs: 20
 
+<br>
+<br>
+
 
 Data Split | Metric   | NeuralNetMLP |
 -----------|----------|--------------|
-Train      | MSE      | X            |
+Train      | MSE      | 0.0059       |
 Train      | Accuracy | 96.52%       |
-Train      | AUC      | X            |
-Validation | MSE      | X            |
+Train      | AUC      | 0.9975       |
+
+<br>
+<br>
+
+Data Split | Metric   | NeuralNetMLP |
+-----------|----------|--------------|
 Validation | Accuracy | 95.26%       |
-Validation | AUC      | X            |
+Validation | AUC      | 0.9975       |
 
-
+<br>
+<br>
 
 ### Performance Results
 
-Data Split | Metric    | NeuralNetMLP |
+Data Split | Metric    | NeuralNetMLP     |
 -----------|-----------|------------------|
-Test       |  MSE      | 0.0075           |
 Test       |  Accuracy | 95.25%           |
-Test       |  AUC      | X                |
+Test       |  AUC      | 0.9969           |
 
 ---
 
@@ -115,8 +123,8 @@ Test       |  AUC      | X                |
 
 #### Training
 
-*Figure 3: Training loss and accuracy progression across epochs*
-![Training Loss and Accuracy](./docs/figures/keras_train_acc_mse.png)
+*Figure 2: `Keras` metrics progression across training epochs* <br>
+![Keras metrics progression](./docs/figures/keras_training_history.png)
 
 **Training Configuration**:
 - Learning rate: 0.1
@@ -126,34 +134,32 @@ Test       |  AUC      | X                |
 
 Data Split | Metric    | Keras ANN |
 -----------|-----------|-----------|
-Validation |  MSE      | 0.9361    |
-Validation |  Accuracy | 94.22%    |
+Validation |  Accuracy | 88.89%    |
+Validation |  AUC      | 0.9882    |
+
 
 
 ### Keras Model Performance
 
 Data Split | Metric   | Keras ANN |
 -----------|----------|-----------|
-Test       | MSE      | 0.0611    | 
-Test       | Accuracy | 56.39%    |
+Test       | Accuracy | 87.51%    |
+Test       |  AUC     | 0.9855    |
+
 
 ---
 
 ## Step 4 Comparative Analysis
 
-The custom NumPy-based ANN significantly outperforms the Keras implementation on the MNIST dataset, achieving **95.25% test accuracy** with a **test MSE of 0.0075**, compared to **56.39% accuracy** and **0.0611 MSE** for the Keras model. This large performance gap suggests issues in the Keras configuration, such as suboptimal hyperparameters, insufficient training, or architectural mismatch, and indicates likely overfitting or poor generalization.
-
-The **single-layer ANN**, which corresponds to the **original ANN implementation presented in the course textbook**, also performs competitively, reaching **94.54% test accuracy** with a **test MSE of 0.0092**. This result demonstrates that even the baseline architecture described in the book can generalize well when carefully implemented and trained. The deeper custom NumPy ANN provides a modest performance improvement, highlighting the benefit of increased model capacity.
-
-All models used identical preprocessing and dataset splits, ensuring a fair comparison.
-
-
 | Aspect          | Singel Layer ANN | NeuralNetMLP | Keras  | 
 |-----------------|------------------|--------------|--------|
-| Test MSE        |  0.0092          | 0.0075       | 0.0611 |
-| Test Accuracy   |  94.54%          | 95.25%       | 56.39% |
+| Test Accuracy   |  94.54%          | 95.25%       | 87.51% |
+| Test AUC        |  *Nan*           | 0.9969       | 0.9855 |
 | Training Speed  |  Moderate        | Moderate     | Fast   |
 | Code Complexity | High             | High         | Low    | 
+
+
+The table highlights clear trade-offs between the three ANN implementations. The Single Layer ANN provides a strong baseline performance with high accuracy but lacks probabilistic quality measures such as AUC, limiting deeper evaluation. The NeuralNetMLP achieves the best overall performance, delivering the highest test accuracy and AUC, which indicates superior representation capacity and generalization at the cost of higher implementation complexity and moderate training speed. In contrast, the Keras model offers the fastest training and lowest code complexity, making it more practical and scalable, but with slightly reduced predictive performance compared to the custom NumPy-based MLP. Overall, the results demonstrate that increased architectural depth and custom control can yield better performance, while high-level frameworks prioritize efficiency and usability.
 
 
 

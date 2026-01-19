@@ -1,4 +1,4 @@
-# Assignment 3 – Building a Multilayer Artificial Neural Network
+# ML Assignment 3 - README
 
 We implement a multilayer artificial neural network (ANN) using only NumPy and Python, and comparing its performance with a single-layer ANN and a Keras-based ANN implementation
 
